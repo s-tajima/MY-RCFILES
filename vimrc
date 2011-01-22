@@ -1,1 +1,5 @@
-echo "share_vimrc_read"
+set tabstop=4
+set shiftwidth=4
+set number
+
+colorscheme ron
