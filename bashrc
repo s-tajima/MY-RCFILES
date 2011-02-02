@@ -7,6 +7,6 @@ alias gs="git status"
 #alias svn
 alias ss="svn status"
 alias sc="svn commit"
-alias su="svn update"
+alias sup="svn update"
 
 alias screen="screen -xR"
