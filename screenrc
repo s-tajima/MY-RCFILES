@@ -46,6 +46,7 @@ bindkey -k k5 select 4
 bindkey -k k6 select 5
 bindkey -k k7 select 6
 bindkey -k k8 select 7
+bindkey -k k9 select 8
 
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
