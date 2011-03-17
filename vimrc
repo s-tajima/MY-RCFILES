@@ -15,5 +15,4 @@ let php_folding=1
 highlight Folded ctermfg=blue
 highlight FoldColumn ctermfg=blue
 
-map @v veyopa);Ivar_dump(
-map @b veyo<esc>pa);<esc>Ivar_dump(<esc>
+map @v veyo<esc>pa);<esc>Ivar_dump(<esc>
