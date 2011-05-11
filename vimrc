@@ -20,3 +20,6 @@ map @v veyovar_dump(<esc>pa);<esc>==:w<CR>
 map @V veykovar_dump(<esc>pa);<esc>==:w<CR>
 map @l veyo_log(<esc>pa);<esc>==:w<CR>
 map @L veyko_log(<esc>pa);<esc>==:w<CR>
+map @i veyoif(<esc>pa){<CR>}<esc>Vk=:w<CR>ko
+
+
