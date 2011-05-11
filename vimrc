@@ -21,5 +21,6 @@ map @V veykovar_dump(<esc>pa);<esc>==:w<CR>
 map @l veyo_log(<esc>pa);<esc>==:w<CR>
 map @L veyko_log(<esc>pa);<esc>==:w<CR>
 map @i veyoif(<esc>pa){<CR>}<esc>Vk=:w<CR>o
-map @f veyoforeach(<esc>pa){<CR>}<esc>Vk=:w
+map @I veyoif(){<CR>}<esc>Vk=:w<CR>
+map @f veyoforeach(){<CR>}<esc>Vk=:w<CR>
 
