@@ -16,7 +16,8 @@ highlight Folded ctermfg=blue
 highlight FoldColumn ctermfg=blue
 
 map @r Dko<esc>pI
-map @v veyo<esc>pa);<esc>Ivar_dump(<esc>==:w<CR>
+#map @v veyo<esc>pa);<esc>Ivar_dump(<esc>==:w<CR>
+map @v veyovar_dump(<esc>pa);==:w<CR>
 map @V veyko<esc>pa);<esc>Ivar_dump(<esc>==:w<CR>
 map @l veyo<esc>pa);<esc>I_log(<esc>==:w<CR>
 map @L veyko<esc>pa);<esc>I_log(<esc>==:w<CR>
