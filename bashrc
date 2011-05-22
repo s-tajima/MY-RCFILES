@@ -12,4 +12,4 @@ alias sup="svn update"
 alias screen="screen -xR"
 
 alias la="ls -al"
-alias ll="ll -l"
+alias ll="ls -l"
