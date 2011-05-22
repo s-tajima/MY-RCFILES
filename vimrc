@@ -5,6 +5,7 @@ set shiftwidth=4
 set number
 set hlsearch
 set backspace=indent,eol,start
+set smartindent
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
