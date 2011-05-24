@@ -13,3 +13,5 @@ alias screen="screen -xR"
 
 alias la="ls -al"
 alias ll="ls -l"
+alias cp="cp -i"
+alias mv="mv -i"
