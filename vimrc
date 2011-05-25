@@ -1,3 +1,5 @@
+source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
+
 set nocompatible
 
 set tabstop=4
