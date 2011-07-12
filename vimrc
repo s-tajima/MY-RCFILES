@@ -30,7 +30,8 @@ map @I veyoif(){<CR>}<esc>Vk=:w<CR>wa
 map @f veyoforeach(){<CR>}<esc>Vk=:w<CR>wa
 
 "neocomplcache settings ----
-let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_at_startup = 1
+"---------------------------
 
 function InsertTabWrapper()
 	if pumvisible()
@@ -47,4 +48,3 @@ function InsertTabWrapper()
 endfunction
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"---------------------------------
