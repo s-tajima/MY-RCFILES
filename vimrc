@@ -1,5 +1,6 @@
 source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
 source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
+source ~/MY-RCFILES/vim-plugin/vim-javascript/javascript.vim
 call pathogen#runtime_append_all_bundles()
 
 set nocompatible
