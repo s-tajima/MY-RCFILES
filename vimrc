@@ -11,6 +11,8 @@ set number
 set hlsearch
 set backspace=indent,eol,start
 set smartindent
+"set wildmode=list:full
+set wildmenu
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
