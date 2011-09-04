@@ -10,7 +10,7 @@ startup_message off
 # keybindings
 #
 
-escape ^Zz
+#escape ^Zz
 
 bind -c REGION 2 split
 bind -c REGION 1 only
