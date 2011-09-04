@@ -23,7 +23,7 @@ let php_folding=1
 highlight Folded ctermfg=blue
 highlight FoldColumn ctermfg=blue
 
-map @= gg=G
+map @= mzgg=G`z
 map @r Dko<esc>pI
 map @v veyovar_dump(<esc>pa);<esc>==:w<CR>
 map @V veykovar_dump(<esc>pa);<esc>==:w<CR>
