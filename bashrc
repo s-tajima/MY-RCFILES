@@ -12,6 +12,7 @@ alias sc="svn commit"
 alias sup="svn update"
 
 alias screen="screen -xR"
+alias sr="screen -xR"
 
 alias la="ls -al"
 alias ll="ls -l"
