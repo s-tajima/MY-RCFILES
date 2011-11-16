@@ -53,6 +53,6 @@ endfunction
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")
+ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab /s /*********************************************************
 ab /e  ********************************************************/
