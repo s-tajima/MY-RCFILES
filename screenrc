@@ -32,6 +32,9 @@ bind 'K' kill
 bind 'I' login on
 bind 'O' login off
 bind '}' history
+bind 's' split
+bind 'f' focus
+bind 'q' remove
 
 # This makes screen treat backspaces '^?' as
 # deletes. There should be a fix in the code
