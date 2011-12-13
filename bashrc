@@ -20,5 +20,5 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 function gr() {
-	command grep -r $1 ./
+	command grep -r --color $1 ./
 }
