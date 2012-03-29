@@ -14,6 +14,11 @@ set smartindent
 "set wildmode=list:full
 set wildmenu
 
+filetype on
+filetype indent on
+filetype plugin on
+au FileType ruby set ts=3 sw=3 expandtab
+
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
 :nmap <C-H> <C-W>h
