@@ -19,6 +19,9 @@ alias ll="ls -l"
 alias cp="cp -i"
 alias mv="mv -i"
 
+#PHPUnit
+alias pu="phpunit --colors"
+
 function gr() {
 	command grep -r --color $1 ./
 }
