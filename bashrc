@@ -19,6 +19,8 @@ alias ll="ls -l"
 alias cp="cp -i"
 alias mv="mv -i"
 
+alias his="history | grep "
+
 #PHPUnit
 alias pu="phpunit --colors"
 
