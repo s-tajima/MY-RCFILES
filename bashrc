@@ -5,6 +5,8 @@ alias gc="git commit"
 alias gs="git status"
 alias ga="git add -A"
 alias gd="git diff"
+alias gco="git checkout"
+alias gb="git branch"
 
 #alias svn
 alias ss="svn status"
