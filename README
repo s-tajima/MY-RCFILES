@@ -1,0 +1,5 @@
+git clone git://github.com/s-tajima/MY-RCFILES.git
+git clone git://github.com/s-tajima/.vim.git
+chmod u+x MY-RCFILES/_init.sh
+MY-RCFILES/_init.sh
+
