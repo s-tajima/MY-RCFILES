@@ -17,7 +17,7 @@ set cursorline
 
 filetype on
 filetype indent on
-filetype plugin on
+"filetype plugin on
 au FileType ruby set ts=3 sw=3 expandtab
 
 :nmap <C-J> <C-W>j
@@ -60,7 +60,7 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
-ab /s /*********************************************************
-ab /e  ********************************************************/
+ab //s /*********************************************************
+ab //e  ********************************************************/
 
 ab #t $this->
