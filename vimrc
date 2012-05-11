@@ -1,6 +1,7 @@
 source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
 source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
 source ~/MY-RCFILES/vim-plugin/vim-javascript/javascript.vim
+source ~/MY-RCFILES/vim-plugin/vim-autocursor/autocursor.vim
 call pathogen#runtime_append_all_bundles()
 
 set nocompatible
@@ -13,7 +14,6 @@ set backspace=indent,eol,start
 set smartindent
 "set wildmode=list:full
 set wildmenu
-set cursorline
 
 filetype on
 filetype indent on
