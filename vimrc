@@ -13,6 +13,7 @@ set backspace=indent,eol,start
 set smartindent
 "set wildmode=list:full
 set wildmenu
+set cursorline
 
 filetype on
 filetype indent on
