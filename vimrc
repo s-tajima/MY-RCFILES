@@ -26,10 +26,15 @@ filetype indent on
 
 map @= mzgg=G`z
 
+ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
+ab //s /*********************************************************
+ab //e  ********************************************************/
+
 "neocomplcache settings ----
 "let g:neocomplcache_enable_at_startup = 1
 "---------------------------
 
+"complement by <TAB>>
 function InsertTabWrapper()
 	if pumvisible()
 		return "\<c-n>"
@@ -43,13 +48,28 @@ function InsertTabWrapper()
 		return "\<c-x>\<c-o>"
 	endif
 endfunction
-
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
-ab //s /*********************************************************
-ab //e  ********************************************************/
-
+"display statusline
+function GetStatusEx()
+	let str = ''
+	if &ft != ''
+		let str = str . '[' . &ft . ']'
+	endif
+	if has('multi_byte')
+		if &fenc != ''
+			let str = str . '[' . &fenc . ']'
+		elseif &enc != ''
+			let str = str . '[' . &enc . ']'
+		endif
+	endif
+	if &ff != ''
+		let str = str . '[' . &ff . ']'
+	endif
+	return str
+endfunction
+set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
+set laststatus=2
 
 autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
