@@ -2,6 +2,7 @@ let php_folding=1
 highlight Folded ctermfg=blue
 highlight FoldColumn ctermfg=blue
 
+nnoremap <Space>e :w<CR>:<C-u>!php %<CR>
 map @r Dko<esc>pI
 map @v veyovar_dump(<esc>pa);<esc>==:w<CR>
 map @V veykovar_dump(<esc>pa);<esc>==:w<CR>
@@ -16,3 +17,4 @@ ab //s /*********************************************************
 ab //e  ********************************************************/
 
 ab #t $this->
+
