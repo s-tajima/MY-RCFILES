@@ -45,7 +45,7 @@ function! InsertTabWrapper()
 	elseif exists('&omnifunc') && &omnifunc == ''
 		return "\<c-n>"
 	else
-		return "\<c-x>\<c-o>"
+		return "\<c-n>"
 	endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
