@@ -18,26 +18,13 @@ set wildmenu
 filetype on
 filetype indent on
 "filetype plugin on
-au FileType ruby set ts=3 sw=3 expandtab
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
 :nmap <C-H> <C-W>h
 :nmap <C-L> <C-W>l
 
-let php_folding=1
-highlight Folded ctermfg=blue
-highlight FoldColumn ctermfg=blue
-
 map @= mzgg=G`z
-map @r Dko<esc>pI
-map @v veyovar_dump(<esc>pa);<esc>==:w<CR>
-map @V veykovar_dump(<esc>pa);<esc>==:w<CR>
-map @l veyo_log(<esc>pa);<esc>==:w<CR>
-map @L veyko_log(<esc>pa);<esc>==:w<CR>
-map @i veyoif(<esc>pa){<CR>}<esc>Vk=:w<CR>o
-map @I veyoif(){<CR>}<esc>Vk=:w<CR>wa
-map @f veyoforeach(){<CR>}<esc>Vk=:w<CR>wa
 
 "neocomplcache settings ----
 "let g:neocomplcache_enable_at_startup = 1
@@ -63,4 +50,7 @@ ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab //s /*********************************************************
 ab //e  ********************************************************/
 
-ab #t $this->
+
+autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
+autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
+autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
