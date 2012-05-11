@@ -34,46 +34,42 @@ nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
 "let g:neocomplcache_enable_at_startup = 1
 "---------------------------
 
-if exists('g:my_functions')
-	let g:my_functions = 1
-	"complement by <TAB>>
-	function InsertTabWrapper()
-		if pumvisible()
-			return "\<c-n>"
-		endif
-		let col = col('.') - 1
-		if !col || getline('.')[col - 1] !~ '\k\|<\|/'
-			return "\<tab>"
-		elseif exists('&omnifunc') && &omnifunc == ''
-			return "\<c-n>"
-		else
-			return "\<c-x>\<c-o>"
-		endif
-	endfunction
-	inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"complement by <TAB>>
+function! InsertTabWrapper()
+	if pumvisible()
+		return "\<c-n>"
+	endif
+	let col = col('.') - 1
+	if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+		return "\<tab>"
+	elseif exists('&omnifunc') && &omnifunc == ''
+		return "\<c-n>"
+	else
+		return "\<c-x>\<c-o>"
+	endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-	"display statusline
-	function GetStatusEx()
-		let str = ''
-		if &ft != ''
-			let str = str . '[' . &ft . ']'
+"display statusline
+function! GetStatusEx()
+	let str = ''
+	if &ft != ''
+		let str = str . '[' . &ft . ']'
+	endif
+	if has('multi_byte')
+		if &fenc != ''
+			let str = str . '[' . &fenc . ']'
+		elseif &enc != ''
+			let str = str . '[' . &enc . ']'
 		endif
-		if has('multi_byte')
-			if &fenc != ''
-				let str = str . '[' . &fenc . ']'
-			elseif &enc != ''
-				let str = str . '[' . &enc . ']'
-			endif
-		endif
-		if &ff != ''
-			let str = str . '[' . &ff . ']'
-		endif
-		return str
-	endfunction
-	set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
-	set laststatus=2
-endif
-
+	endif
+	if &ff != ''
+		let str = str . '[' . &ff . ']'
+	endif
+	return str
+endfunction
+set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
+set laststatus=2
 
 filetype on
 filetype indent on
