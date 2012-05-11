@@ -15,61 +15,69 @@ set smartindent
 "set wildmode=list:full
 set wildmenu
 
-filetype on
-filetype indent on
-"filetype plugin on
-
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
 :nmap <C-H> <C-W>h
 :nmap <C-L> <C-W>l
 
-map @= mzgg=G`z
+nnoremap <Space>= mzgg=G`z
 
 ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab //s /*********************************************************
 ab //e  ********************************************************/
 
+nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
+nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
+
 "neocomplcache settings ----
 "let g:neocomplcache_enable_at_startup = 1
 "---------------------------
 
-"complement by <TAB>>
-function InsertTabWrapper()
-	if pumvisible()
-		return "\<c-n>"
-	endif
-	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k\|<\|/'
-		return "\<tab>"
-	elseif exists('&omnifunc') && &omnifunc == ''
-		return "\<c-n>"
-	else
-		return "\<c-x>\<c-o>"
-	endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-
-"display statusline
-function GetStatusEx()
-	let str = ''
-	if &ft != ''
-		let str = str . '[' . &ft . ']'
-	endif
-	if has('multi_byte')
-		if &fenc != ''
-			let str = str . '[' . &fenc . ']'
-		elseif &enc != ''
-			let str = str . '[' . &enc . ']'
+if exists('g:my_functions')
+	let g:my_functions = 1
+	"complement by <TAB>>
+	function InsertTabWrapper()
+		if pumvisible()
+			return "\<c-n>"
 		endif
-	endif
-	if &ff != ''
-		let str = str . '[' . &ff . ']'
-	endif
-	return str
-endfunction
-set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
-set laststatus=2
+		let col = col('.') - 1
+		if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+			return "\<tab>"
+		elseif exists('&omnifunc') && &omnifunc == ''
+			return "\<c-n>"
+		else
+			return "\<c-x>\<c-o>"
+		endif
+	endfunction
+	inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+	"display statusline
+	function GetStatusEx()
+		let str = ''
+		if &ft != ''
+			let str = str . '[' . &ft . ']'
+		endif
+		if has('multi_byte')
+			if &fenc != ''
+				let str = str . '[' . &fenc . ']'
+			elseif &enc != ''
+				let str = str . '[' . &enc . ']'
+			endif
+		endif
+		if &ff != ''
+			let str = str . '[' . &ff . ']'
+		endif
+		return str
+	endfunction
+	set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
+	set laststatus=2
+endif
+
+
+filetype on
+filetype indent on
+"filetype plugin on
 
 autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
