@@ -27,7 +27,8 @@ set title
 nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
 nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
-nnoremap <Space>= mzgg=G`z
+nnoremap <Space>- mzgg=G`z
+nnoremap <Space>=  mz`[V`]=`z
 nnoremap <CR> O
 nnoremap <S-t> :tabnew
 nnoremap <Space>gd :!git diff %<CR>
@@ -81,6 +82,7 @@ filetype on
 filetype indent on
 filetype plugin on
 
+autocmd!
 autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
 autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
