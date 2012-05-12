@@ -5,7 +5,6 @@ source ~/MY-RCFILES/vim-plugin/vim-autocursor/autocursor.vim
 call pathogen#runtime_append_all_bundles()
 
 set nocompatible
-
 set tabstop=4
 set shiftwidth=4
 set number
@@ -14,21 +13,28 @@ set backspace=indent,eol,start
 set smartindent
 "set wildmode=list:full
 set wildmenu
+set shell=/bin/bash\ -l\ -O\ expand_aliases
+set virtualedit=block
+set ignorecase
+set smartcase
+set title
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
 :nmap <C-H> <C-W>h
 :nmap <C-L> <C-W>l
 
+nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
+nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
 nnoremap <Space>= mzgg=G`z
+nnoremap <CR> O
+nnoremap <S-t> :tabnew
+nnoremap <Space>gd :!git diff %<CR>
 
 ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab //s /*********************************************************
 ab //e  ********************************************************/
-
-nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
-nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
-nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
 
 "neocomplcache settings ----
 "let g:neocomplcache_enable_at_startup = 1
@@ -73,7 +79,7 @@ set laststatus=2
 
 filetype on
 filetype indent on
-"filetype plugin on
+filetype plugin on
 
 autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
