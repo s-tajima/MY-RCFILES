@@ -1,9 +1,12 @@
+autocmd!
+
 source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
 source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
 source ~/MY-RCFILES/vim-plugin/vim-javascript/javascript.vim
 source ~/MY-RCFILES/vim-plugin/vim-autocursor/autocursor.vim
 call pathogen#runtime_append_all_bundles()
 
+syntax on
 set nocompatible
 set tabstop=4
 set shiftwidth=4
@@ -33,6 +36,10 @@ nnoremap <CR> O
 nnoremap <S-t> :tabnew
 nnoremap <Space>gd :!git diff %<CR>
 
+"complement by <TAB>>
+inoremap <tab> <c-n>
+inoremap <s-tab> <c-p>
+
 ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab //s /*********************************************************
 ab //e  ********************************************************/
@@ -40,22 +47,6 @@ ab //e  ********************************************************/
 "neocomplcache settings ----
 "let g:neocomplcache_enable_at_startup = 1
 "---------------------------
-
-"complement by <TAB>>
-function! InsertTabWrapper()
-	if pumvisible()
-		return "\<c-n>"
-	endif
-	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k\|<\|/'
-		return "\<tab>"
-	elseif exists('&omnifunc') && &omnifunc == ''
-		return "\<c-n>"
-	else
-		return "\<c-n>"
-	endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 "display statusline
 function! GetStatusEx()
@@ -82,7 +73,6 @@ filetype on
 filetype indent on
 filetype plugin on
 
-autocmd!
 autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
 autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
