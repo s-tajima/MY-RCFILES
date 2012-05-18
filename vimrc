@@ -27,6 +27,11 @@ set title
 :nmap <C-H> <C-W>h
 :nmap <C-L> <C-W>l
 
+vnoremap J 3j
+vnoremap K 3k
+vnoremap ss s
+
+nnoremap r <C-R>
 nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
 nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
