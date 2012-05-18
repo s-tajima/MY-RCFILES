@@ -48,3 +48,16 @@ else
 	echo -e "\n${sig}\n${source}\n" >> ${rcfile}
 	echo -e "add ${source} to ${rcfile}"
 fi
+
+##
+# inputrc
+##
+rcfile="$HOME/.inputrc"
+source="source $HOME/MY-RCFILES/inputrc"
+if grep "${source}" ${rcfile} > /dev/null; then
+	echo -e "${source} is ${RED}found${END}"
+else
+	echo -e "${source} is ${GRN}not found${END}"
+	echo -e "\n${sig}\n${source}\n" >> ${rcfile}
+	echo -e "add ${source} to ${rcfile}"
+fi

@@ -1,0 +1,5 @@
+$if mysql
+	"\C-sd": "show databases;\n"
+	"\C-st": "show tables;\n"
+	"\C-ss": "select * from "
+$endif
