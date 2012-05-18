@@ -16,12 +16,15 @@ alias sup="svn update"
 alias screen="screen -xR"
 alias sr="screen -xR"
 
+alias ll="ls -l"
 alias la="ls -al"
 alias ll="ls -l"
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp -v -i"
+alias mv="mv -v -i"
+alias rm="rm -v"
 
 alias his="history | grep "
+alias ff='find . -name $*'
 
 #PHPUnit
 alias pu="phpunit --colors"
