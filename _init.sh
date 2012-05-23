@@ -61,3 +61,16 @@ else
 	echo -e "\n${sig}\n${source}\n" >> ${rcfile}
 	echo -e "add ${source} to ${rcfile}"
 fi
+
+##
+# .vim
+##
+rcfile="$HOME/.vim"
+source="$HOME/MY-RCFILES/vim"
+if [ -L ${rcfile} ]; then
+	echo -e "${rcfile} is ${RED}found${END}"
+else
+	echo -e "${rcfile} is ${GRN}not found${END}"
+	ln -s "${source}" "${rcfile}" > /dev/null
+	echo -e "made synbolic link ${source} to ${rcfile}"
+fi

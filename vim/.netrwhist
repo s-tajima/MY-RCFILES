@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/s_tajima/.ssh'
+let g:netrw_dirhist_2='/Users/s_tajima/Develop/test'
+let g:netrw_dirhist_3='/Users/s_tajima/Develop'
+let g:netrw_dirhist_4='/Users/s_tajima/Develop/test'
+let g:netrw_dirhist_5='/Users/s_tajima/Develop/tmp'
+let g:netrw_dirhist_6='/users/s_tajima/MY-RCFILES'
+let g:netrw_dirhist_7='/Users/s_tajima/Develop'
