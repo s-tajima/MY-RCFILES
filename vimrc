@@ -31,6 +31,8 @@ vnoremap J 3j
 vnoremap K 3k
 vnoremap ss s
 
+nnoremap <S-h> b
+nnoremap <S-l> w
 nnoremap r <C-R>
 nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
 nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
