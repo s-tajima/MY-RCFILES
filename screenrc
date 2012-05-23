@@ -27,14 +27,22 @@ bind ^\
 bind \\
 bind ^h
 bind h
+
 #make them better
 bind 'K' kill
 bind 'I' login on
 bind 'O' login off
 bind '}' history
-bind 's' split
+bind 's' eval 'split' 'focus' 'select 0'
 bind 'f' focus
 bind 'q' remove
+bind 'w' windowlist -b
+
+#resize
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
 
 # This makes screen treat backspaces '^?' as
 # deletes. There should be a fix in the code
@@ -82,7 +90,4 @@ hardstatus string "[screen %n] %h"
 
 # tab
 caption always "%{= wg} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d %{=b wm}%c"
-
 vbell off
-
-
