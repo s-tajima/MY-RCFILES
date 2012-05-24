@@ -43,13 +43,6 @@ nnoremap <CR> O
 nnoremap <S-t> :tabnew
 nnoremap <Space>gd :!git diff %<CR>
 
-inoremap {} {}<LEFT>
-inoremap [] []<LEFT>
-inoremap () ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap <> <><LEFT>
-
 ab #s #edited by Satoshi Tajima <C-R>=strftime("%Y-%m-%d %T")<CR>
 ab //s /*********************************************************
 ab //e  ********************************************************/
