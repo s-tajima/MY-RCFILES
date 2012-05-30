@@ -6,6 +6,12 @@ sig=`cat <<EOF
 ###
 EOF`
 
+sig_vimrc=`cat <<EOF
+"""
+" added by ~/MY-RCFILES/_init.sh
+"""
+EOF`
+
 RED="\e[31m"
 GRN="\e[32m"
 END="\e[00m"
@@ -32,7 +38,7 @@ if grep "${source}" ${rcfile} > /dev/null; then
 	echo -e "${source} is ${RED}found${END}"
 else
 	echo -e "${source} is ${GRN}not found${END}"
-	echo -e "\n${sig}\n${source}\n" >> ${rcfile}
+	echo -e "\n${sig_vimrc}\n${source}\n" >> ${rcfile}
 	echo -e "add ${source} to ${rcfile}"
 fi
 
