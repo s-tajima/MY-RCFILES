@@ -30,6 +30,7 @@ set title
 vnoremap J 3j
 vnoremap K 3k
 vnoremap ss s
+vnoremap p pgvy
 
 nnoremap <S-h> b
 nnoremap <S-l> w
