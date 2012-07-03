@@ -97,3 +97,4 @@ autocmd FileType php source ~/MY-RCFILES/vim-plugin/vim-language/php.vim
 autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
 autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
 autocmd FileType javascript source ~/MY-RCFILES/vim-plugin/vim-language/javascript.vim
+autocmd FileType puppet source ~/MY-RCFILES/vim-plugin/vim-language/puppet.vim
