@@ -1,3 +1,5 @@
-au FileType ruby set ts=3 sw=3 expandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 nnoremap <Space>e :w<CR>:<C-u>!ruby %<CR>
