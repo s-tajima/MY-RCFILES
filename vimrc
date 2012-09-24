@@ -35,6 +35,8 @@ vnoremap p pgvy
 nnoremap <S-h> b
 nnoremap <S-l> w
 nnoremap r <C-R>
+nnoremap <C-n> :<C-u>set number!<CR>
+nnoremap <C-p> :<C-u>set paste!<CR>
 nnoremap <Space>. :<C-u>tabnew $HOME/MY-RCFILES/vimrc<CR>
 nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap <expr> <Space>h ':<C-u>help ' . expand('<cword>') . '<CR>'
