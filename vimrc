@@ -21,6 +21,7 @@ set virtualedit=block
 set ignorecase
 set smartcase
 set title
+set paste
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k

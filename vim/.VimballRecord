@@ -1,0 +1,1 @@
+align.vim: call delete('/Users/s-tajima/.vim/plugin/AlignPlugin.vim')|call delete('/Users/s-tajima/.vim/plugin/AlignMapsPlugin.vim')|call delete('/Users/s-tajima/.vim/plugin/cecutil.vim')|call delete('/Users/s-tajima/.vim/doc/Align.txt')|call delete('/Users/s-tajima/.vim/autoload/Align.vim')|call delete('/Users/s-tajima/.vim/autoload/AlignMaps.vim')
