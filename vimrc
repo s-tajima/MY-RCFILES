@@ -92,6 +92,16 @@ endfunction
 set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
 set laststatus=2
 
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'thinca/vim-quickrun'
+call neobundle#end()
+NeoBundleCheck
+
 filetype on
 filetype indent on
 filetype plugin on
