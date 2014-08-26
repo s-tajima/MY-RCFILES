@@ -93,12 +93,11 @@ set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
 set laststatus=2
 
 if has('vim_starting')
-  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'thinca/vim-quickrun'
+NeoBundle      'thinca/vim-quickrun'
 call neobundle#end()
 NeoBundleCheck
 
@@ -112,3 +111,4 @@ autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
 autocmd FileType javascript source ~/MY-RCFILES/vim-plugin/vim-language/javascript.vim
 autocmd FileType puppet source ~/MY-RCFILES/vim-plugin/vim-language/puppet.vim
 autocmd FileType scheme source ~/MY-RCFILES/vim-plugin/vim-language/gosh.vim
+autocmd FileType go source ~/MY-RCFILES/vim-plugin/vim-language/golang.vim
