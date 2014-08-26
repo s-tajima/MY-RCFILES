@@ -1,10 +1,10 @@
 autocmd!
 
 source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
-source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
+"source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
 source ~/MY-RCFILES/vim-plugin/vim-javascript/javascript.vim
 source ~/MY-RCFILES/vim-plugin/vim-autocursor/autocursor.vim
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 
 syntax on
 set nocompatible
@@ -97,9 +97,9 @@ if has('vim_starting')
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle      'Blackrush/vim-gocode'
 NeoBundle      'thinca/vim-quickrun'
 call neobundle#end()
-NeoBundleCheck
 
 filetype on
 filetype indent on
