@@ -9,9 +9,6 @@ startup_message off
 #
 # keybindings
 #
-
-escape ^Ww
-
 bind -c REGION 2 split
 bind -c REGION 1 only
 bind -c REGION 0 remove

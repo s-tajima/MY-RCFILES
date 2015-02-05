@@ -1,10 +1,10 @@
 autocmd!
 
 source ~/MY-RCFILES/vim-plugin/vim-surround/surround.vim
-source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
+"source ~/MY-RCFILES/vim-plugin/vim-pathogen/pathogen.vim
 source ~/MY-RCFILES/vim-plugin/vim-javascript/javascript.vim
 source ~/MY-RCFILES/vim-plugin/vim-autocursor/autocursor.vim
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 
 syntax on
 set nocompatible
@@ -21,6 +21,7 @@ set virtualedit=block
 set ignorecase
 set smartcase
 set title
+set paste
 
 :nmap <C-J> <C-W>j
 :nmap <C-K> <C-W>k
@@ -91,6 +92,15 @@ endfunction
 set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
 set laststatus=2
 
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle      'Blackrush/vim-gocode'
+NeoBundle      'thinca/vim-quickrun'
+call neobundle#end()
+
 filetype on
 filetype indent on
 filetype plugin on
@@ -100,3 +110,5 @@ autocmd FileType python source ~/MY-RCFILES/vim-plugin/vim-language/python.vim
 autocmd FileType ruby source ~/MY-RCFILES/vim-plugin/vim-language/ruby.vim
 autocmd FileType javascript source ~/MY-RCFILES/vim-plugin/vim-language/javascript.vim
 autocmd FileType puppet source ~/MY-RCFILES/vim-plugin/vim-language/puppet.vim
+autocmd FileType scheme source ~/MY-RCFILES/vim-plugin/vim-language/gosh.vim
+autocmd FileType go source ~/MY-RCFILES/vim-plugin/vim-language/golang.vim
