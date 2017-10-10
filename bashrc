@@ -28,9 +28,6 @@ alias dush="du -sh"
 alias his="history | grep "
 alias ff='find . -name $*'
 
-#PHPUnit
-alias pu="phpunit --colors"
-
 function gr() {
 	command grep -r --color $1 ./
 }
