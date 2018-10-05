@@ -28,9 +28,29 @@ alias dush="du -sh"
 alias his="history | grep "
 alias ff='find . -name $*'
 
-#PHPUnit
-alias pu="phpunit --colors"
-
 function gr() {
 	command grep -r --color $1 ./
+}
+
+PS1="[\t \u@\h \W]$ "
+
+PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
+
+__prompt_command() {
+    local EXIT="$?" # This needs to be first
+    PS1=""
+
+    local RCol='\[\e[0m\]'
+
+    local Red='\[\e[0;31m\]'
+    local Gre='\[\e[0;32m\]'
+    local BYel='\[\e[1;33m\]'
+    local BBlu='\[\e[1;34m\]'
+    local Pur='\[\e[0;35m\]'
+
+    if [ $EXIT != 0 ]; then
+        PS1+="${Red}[\t \u@\h \W]\$ ${RCol}"
+    else
+        PS1+="[\t \u@\h \W]\$ "
+    fi
 }
