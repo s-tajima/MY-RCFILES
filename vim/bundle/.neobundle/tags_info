@@ -1,2 +1,6 @@
 neobundle.vim
+rust.vim
+syntastic
+vim-gocode
 vim-quickrun
+vim-racer

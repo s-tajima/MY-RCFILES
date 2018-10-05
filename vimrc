@@ -99,6 +99,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle      'Blackrush/vim-gocode'
 NeoBundle      'thinca/vim-quickrun'
+NeoBundle      'rust-lang/rust.vim'
 call neobundle#end()
 
 filetype on
@@ -112,3 +113,5 @@ autocmd FileType javascript source ~/MY-RCFILES/vim-plugin/vim-language/javascri
 autocmd FileType puppet source ~/MY-RCFILES/vim-plugin/vim-language/puppet.vim
 autocmd FileType scheme source ~/MY-RCFILES/vim-plugin/vim-language/gosh.vim
 autocmd FileType go source ~/MY-RCFILES/vim-plugin/vim-language/golang.vim
+autocmd FileType rust source ~/MY-RCFILES/vim-plugin/vim-language/rust.vim
+
