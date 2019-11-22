@@ -100,6 +100,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle      'Blackrush/vim-gocode'
 NeoBundle      'thinca/vim-quickrun'
 NeoBundle      'rust-lang/rust.vim'
+NeoBundle      'leafgarland/typescript-vim'
 call neobundle#end()
 
 filetype on
