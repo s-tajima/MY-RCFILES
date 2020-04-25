@@ -34,7 +34,7 @@ function gr() {
 
 PS1="[\t \u@\h \W]$ "
 
-PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
+#PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 
 __prompt_command() {
     local EXIT="$?" # This needs to be first

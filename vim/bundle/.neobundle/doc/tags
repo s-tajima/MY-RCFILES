@@ -1,3 +1,14 @@
+:Drop	vim-gocode.txt	/*:Drop*
+:Fmt	vim-gocode.txt	/*:Fmt*
+:GoDrop	vim-gocode.txt	/*:GoDrop*
+:GoImport	vim-gocode.txt	/*:GoImport*
+:GoImportAs	vim-gocode.txt	/*:GoImportAs*
+:GoInstall	vim-gocode.txt	/*:GoInstall*
+:GoTest	vim-gocode.txt	/*:GoTest*
+:GoTestVerbose	vim-gocode.txt	/*:GoTestVerbose*
+:Godoc	vim-gocode.txt	/*:Godoc*
+:Import	vim-gocode.txt	/*:Import*
+:ImportAs	vim-gocode.txt	/*:ImportAs*
 :NeoBundle	neobundle.txt	/*:NeoBundle*
 :NeoBundleCheck	neobundle.txt	/*:NeoBundleCheck*
 :NeoBundleCheckUpdate	neobundle.txt	/*:NeoBundleCheckUpdate*
@@ -26,6 +37,7 @@
 :NeoBundleUpdate!	neobundle.txt	/*:NeoBundleUpdate!*
 :NeoBundleUpdatesLog	neobundle.txt	/*:NeoBundleUpdatesLog*
 :QuickRun	quickrun.txt	/*:QuickRun*
+:RelPkg	vim-gocode.txt	/*:RelPkg*
 <Plug>(quickrun)	quickrun.txt	/*<Plug>(quickrun)*
 <Plug>(quickrun-op)	quickrun.txt	/*<Plug>(quickrun-op)*
 b:quickrun_config	quickrun.txt	/*b:quickrun_config*
@@ -241,3 +253,6 @@ quickrun.txt	quickrun.txt	/*quickrun.txt*
 unite-action-neobundle-lazy	neobundle.txt	/*unite-action-neobundle-lazy*
 unite-action-neobundle-search	neobundle.txt	/*unite-action-neobundle-search*
 unite-kind-neobundle	neobundle.txt	/*unite-kind-neobundle*
+vim-gocode-contents	vim-gocode.txt	/*vim-gocode-contents*
+vim-gocode-usage	vim-gocode.txt	/*vim-gocode-usage*
+vim-gocode.txt	vim-gocode.txt	/*vim-gocode.txt*

@@ -1,2 +1,5 @@
 neobundle.vim
+rust.vim
+typescript-vim
+vim-gocode
 vim-quickrun
