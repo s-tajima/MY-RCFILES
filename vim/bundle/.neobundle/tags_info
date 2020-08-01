@@ -3,3 +3,4 @@ rust.vim
 typescript-vim
 vim-gocode
 vim-quickrun
+vim-vue

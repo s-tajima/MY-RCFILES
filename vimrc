@@ -101,6 +101,7 @@ NeoBundle      'Blackrush/vim-gocode'
 NeoBundle      'thinca/vim-quickrun'
 NeoBundle      'rust-lang/rust.vim'
 NeoBundle      'leafgarland/typescript-vim'
+NeoBundle      'posva/vim-vue'
 call neobundle#end()
 
 filetype on
